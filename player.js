@@ -60,8 +60,8 @@ class Player {
       if (this.pieces[i].color === "black") piece.classList.add("blackPiece")
       else piece.classList.add("whitePiece")
       piece.classList.add(`${this.pieces[i].color}${this.pieces[i].type}`)
-      piece.style.marginLeft = `${this.pieces[i].x * 90}px`
-      piece.style.marginTop = `${this.pieces[i].y * 90}px`
+      piece.style.marginLeft = `${this.pieces[i].x * 50}px`
+      piece.style.marginTop = `${this.pieces[i].y * 50}px`
 
       board.appendChild(piece)
     }

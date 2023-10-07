@@ -47,8 +47,8 @@ class Board {
 
     for (let i = 0; i < oldPieces.length; i++) {
       if (!newPieces[i].alive) oldPieces[i].style.visibility = "hidden"
-      oldPieces[i].style.marginLeft = `${newPieces[i].x * 90}px`
-      oldPieces[i].style.marginTop = `${newPieces[i].y * 90}px`
+      oldPieces[i].style.marginLeft = `${newPieces[i].x * 50}px`
+      oldPieces[i].style.marginTop = `${newPieces[i].y * 50}px`
     }
   }
 }

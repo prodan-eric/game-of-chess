@@ -1,0 +1,95 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#game {
+    display: grid;
+    justify-content: center;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#status {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#board {
+    height: 720px;
+    width: 720px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.cell {
+    flex-basis: 12.5%;
+    width: 80px;
+    height: 90px;
+}
+
+.blackCell {
+    background-color: rgb(3, 66, 126);
+}
+
+.whiteCell {
+    background-color: rgb(230, 230, 230);
+}
+
+.whitePiece {
+    color:beige;
+}
+
+.blackPiece {
+    color: black;
+}
+
+.piece {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke:0.3px black;
+    width: 90px;
+    height: 90px;
+    position: absolute; 
+    transition: all 100ms;
+    background-size: contain;
+}
+
+.whiteQ {
+    background-image: url("./images/queen_w.png");
+}
+.whiteB {
+    background-image: url("./images/bishop_w.png");
+}
+.whiteK {
+    background-image: url("./images/knight_w.png");
+}
+
+.blackQ {
+    background-image: url("./images/queen_b.png");
+}
+.blackB {
+    background-image: url("./images/bishop_b.png");
+}
+.blackK {
+    background-image: url("./images/knight_b.png");
+}
+
+.btn {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+}
+.btn:hover {
+    background: lightgrey;
+}

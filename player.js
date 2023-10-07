@@ -60,8 +60,11 @@ class Player {
       if (this.pieces[i].color === "black") piece.classList.add("blackPiece")
       else piece.classList.add("whitePiece")
       piece.classList.add(`${this.pieces[i].color}${this.pieces[i].type}`)
-      piece.style.marginLeft = `${this.pieces[i].x * 50}px`
-      piece.style.marginTop = `${this.pieces[i].y * 50}px`
+      const isMobile = window.matchMedia("(max-width: 768px)")
+      console.log(isMobile)
+      const moveSpace = isMobile.matches ? 40 : 90
+      piece.style.marginLeft = `${this.pieces[i].x * moveSpace}px`
+      piece.style.marginTop = `${this.pieces[i].y * moveSpace}px`
 
       board.appendChild(piece)
     }

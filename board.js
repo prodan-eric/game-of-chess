@@ -47,8 +47,10 @@ class Board {
 
     for (let i = 0; i < oldPieces.length; i++) {
       if (!newPieces[i].alive) oldPieces[i].style.visibility = "hidden"
-      oldPieces[i].style.marginLeft = `${newPieces[i].x * 50}px`
-      oldPieces[i].style.marginTop = `${newPieces[i].y * 50}px`
+      const isMobile = window.matchMedia("(max-width: 768px)")
+      const moveSpace = isMobile.matches ? 40 : 90
+      oldPieces[i].style.marginLeft = `${newPieces[i].x * moveSpace}px`
+      oldPieces[i].style.marginTop = `${newPieces[i].y * moveSpace}px`
     }
   }
 }

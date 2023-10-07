@@ -19,8 +19,8 @@ html {
 }
 
 #board {
-    height: 400px;
-    width: 400px;
+    height: 720px;
+    width: 720px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -29,9 +29,10 @@ html {
 
 .cell {
     flex-basis: 12.5%;
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
 }
+
 
 .blackCell {
     background-color: rgb(3, 66, 126);
@@ -54,8 +55,8 @@ html {
     justify-content: center;
     align-items: center;
     -webkit-text-stroke:0.3px black;
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     position: absolute; 
     transition: all 100ms;
     background-size: contain;
@@ -93,3 +94,21 @@ html {
 .btn:hover {
     background: lightgrey;
 }
+
+@media (max-width: 768px) { 
+    .btn {
+        font-size: 1rem;
+    }
+    #board {
+        height: 320px;
+        width: 320px;
+    }
+    .cell {
+      width: 40px;
+      height: 40px;
+    } 
+    .piece {
+        width: 40px;
+        height: 40px;
+    }
+  }
